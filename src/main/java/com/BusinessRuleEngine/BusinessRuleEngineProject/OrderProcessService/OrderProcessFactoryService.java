@@ -16,6 +16,10 @@ public class OrderProcessFactoryService {
                 product = new BookProduct();
                 responseString = product.applyBusinessRule(payment);
             }
+            else if(orderNumber == 3){
+                product =  new NewMembershipProduct();
+                responseString = product.applyBusinessRule(payment);
+            }
         }
         return responseString;
     }
