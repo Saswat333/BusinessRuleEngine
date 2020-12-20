@@ -17,7 +17,7 @@ public class OrderProcessFactoryServiceTest {
     @Test
     public void testOrderForPhysicalProduct(){
         int payment=100, orderId=1;
-        String expectedResponse = "Packing Slip generated. Shipping slip generated of Rs. 100. ";
+        String expectedResponse = "Packing Slip generated. Shipping slip generated of Rs. 100. Slip generated of commission payment.";
         String response = service.processOrder(payment,orderId);
         Assert.assertEquals(expectedResponse,response);
     }
