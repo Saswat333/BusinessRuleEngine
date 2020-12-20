@@ -76,4 +76,11 @@ public class OrderProcessControllerTest {
         Assert.assertEquals(expectedResponse,responseString);
     }
 
+    @Test
+    public void testGetResultForInvalidOrderNumber() throws Exception{
+        String expectedResponse = "Invalid OrderNumber";
+        Mockito.when(orderService.processOrder(100,9)).thenReturn(expectedResponse);
+        String responseString = orderController.orderProcessor(100,9);
+        Assert.assertEquals(expectedResponse,responseString);
+    }
 }
