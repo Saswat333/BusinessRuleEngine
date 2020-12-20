@@ -3,6 +3,9 @@ package com.BusinessRuleEngine.BusinessRuleEngineProject.OrderProcessService;
 public class NewMembershipProduct implements OrderFilterInterface {
     @Override
     public String applyBusinessRule(int payment) {
-        return null;
+        String responseString;
+        SlipCreation slip = new SlipCreation();
+        responseString = slip.generatePackingSlip(payment);
+        return responseString;
     }
 }

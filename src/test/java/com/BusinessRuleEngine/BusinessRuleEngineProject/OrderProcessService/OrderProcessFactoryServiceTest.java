@@ -26,7 +26,6 @@ public class OrderProcessFactoryServiceTest {
     public void testOrderForBookProduct(){
         int payment=100, orderId=2;
         String expectedResponse = "Packing Slip generated. Royalty slip generated of Rs. 100. Slip generated of commission payment.";
-        OrderProcessFactoryService service = new OrderProcessFactoryService();
         String response = service.processOrder(payment,orderId);
         Assert.assertEquals(expectedResponse,response);
     }
@@ -34,8 +33,7 @@ public class OrderProcessFactoryServiceTest {
     @Test
     public void testOrderForNewMembershipProduct(){
         int payment=100, orderId=3;
-        String expectedResponse = "Packing Slip generated.";
-        OrderProcessFactoryService service = new OrderProcessFactoryService();
+        String expectedResponse = "Packing Slip generated. ";
         String response = service.processOrder(payment,orderId);
         Assert.assertEquals(expectedResponse,response);
     }
