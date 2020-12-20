@@ -21,4 +21,13 @@ public class OrderProcessFactoryServiceTest {
         String response = service.processOrder(payment,orderId);
         Assert.assertEquals(expectedResponse,response);
     }
+
+    @Test
+    public void testOrderForBookProduct(){
+        int payment=100, orderId=2;
+        String expectedResponse = "Packing Slip generated.";
+        OrderProcessFactoryService service = new OrderProcessFactoryService();
+        String response = service.processOrder(payment,orderId);
+        Assert.assertEquals(expectedResponse,response);
+    }
 }
