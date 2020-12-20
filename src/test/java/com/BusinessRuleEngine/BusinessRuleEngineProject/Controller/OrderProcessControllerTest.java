@@ -43,4 +43,12 @@ public class OrderProcessControllerTest {
         String responseString = orderController.orderProcessor(100,1);
         Assert.assertEquals(expectedResponse,responseString);
     }
+
+    @Test
+    public void testGetResultOfOrderNumberTwo() throws Exception{
+        String expectedResponse = "Packing Slip generated. Shipping slip generated of Rs. 100. Slip generated of commission payment.";
+        Mockito.when(orderService.processOrder(100,2)).thenReturn(expectedResponse);
+        String responseString = orderController.orderProcessor(100,2);
+        Assert.assertEquals(expectedResponse,responseString);
+    }
 }
