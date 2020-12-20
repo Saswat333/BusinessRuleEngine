@@ -5,7 +5,10 @@ public class NewMembershipProduct implements OrderFilterInterface {
     public String applyBusinessRule(int payment) {
         String responseString;
         SlipCreation slip = new SlipCreation();
+        ActivateMemberShip status = new ActivateMemberShip();
+
         responseString = slip.generatePackingSlip(payment);
+        responseString = responseString+status.activationOfNewMembership();
         return responseString;
     }
 }

@@ -33,7 +33,7 @@ public class OrderProcessFactoryServiceTest {
     @Test
     public void testOrderForNewMembershipProduct(){
         int payment=100, orderId=3;
-        String expectedResponse = "Packing Slip generated. ";
+        String expectedResponse = "Packing Slip generated. Activated Membership. Welcome Aboard, Membership activated.";
         String response = service.processOrder(payment,orderId);
         Assert.assertEquals(expectedResponse,response);
     }
