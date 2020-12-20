@@ -19,6 +19,7 @@ public class OrderProcessController {
 
     @GetMapping("/order/{payment}/{orderId}")
     public String orderProcessor(@PathVariable Integer payment, @PathVariable Integer orderId){
-        return null;
+        String response = orderProcessor.processOrder(payment,orderId);
+        return response;
     }
 }
