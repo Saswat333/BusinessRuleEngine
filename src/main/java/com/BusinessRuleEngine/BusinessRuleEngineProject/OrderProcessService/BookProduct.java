@@ -4,6 +4,9 @@ public class BookProduct implements OrderFilterInterface {
 
     @Override
     public String applyBusinessRule(int payment) {
-        return null;
+        String responseString;
+        SlipCreation slip = new SlipCreation();
+        responseString = slip.generatePackingSlip(payment);
+        return responseString;
     }
 }
