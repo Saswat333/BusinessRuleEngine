@@ -68,5 +68,12 @@ public class OrderProcessControllerTest {
         Assert.assertEquals(expectedResponse,responseString);
     }
 
+    @Test
+    public void testGetResultOfOrderNumberFive() throws Exception{
+        String expectedResponse = "Packing Slip generated. FirstAid Video added.";
+        Mockito.when(orderService.processOrder(100,5)).thenReturn(expectedResponse);
+        String responseString = orderController.orderProcessor(100,5);
+        Assert.assertEquals(expectedResponse,responseString);
+    }
 
 }
