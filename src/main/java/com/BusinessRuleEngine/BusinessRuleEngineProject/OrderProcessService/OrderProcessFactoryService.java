@@ -8,7 +8,7 @@ public class OrderProcessFactoryService {
         String responseString = null;
         OrderFilterInterface product;
 
-        if (orderNumber >= 1 && orderNumber <= 3) {
+        if (orderNumber >= 1 && orderNumber <= 4) {
             if (orderNumber == 1) {
                 product = new PhysicalProduct();
                 responseString = product.applyBusinessRule(payment);
@@ -18,6 +18,10 @@ public class OrderProcessFactoryService {
             }
             else if(orderNumber == 3){
                 product =  new NewMembershipProduct();
+                responseString = product.applyBusinessRule(payment);
+            }
+            else if(orderNumber == 4){
+                product = new UpdateMembershipProduct();
                 responseString = product.applyBusinessRule(payment);
             }
         }
