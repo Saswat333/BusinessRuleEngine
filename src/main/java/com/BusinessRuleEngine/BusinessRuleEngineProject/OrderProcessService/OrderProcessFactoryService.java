@@ -1,8 +1,9 @@
 package com.BusinessRuleEngine.BusinessRuleEngineProject.OrderProcessService;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class OrderProcessFactoryService {
-
-
     public String processOrder(int payment, int orderNumber) {
         String responseString=null;
         OrderFilterInterface product;
