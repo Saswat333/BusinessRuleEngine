@@ -1,11 +1,11 @@
 package com.BusinessRuleEngine.BusinessRuleEngineProject.OrderProcessService;
 
-public class ActivateMemberShip {
-    public String activationOfNewMembership() {
+public class UpdateMemberShip {
+    public String updateOfExistingMembership(){
         String responseStr ;
         NotificationClass notify = new NotificationClass();
-        responseStr = "Activated Membership. ";
-        responseStr = responseStr + notify.notificationOfNewMembership();
+        responseStr = "Renewed Membership. ";
+        responseStr = responseStr + notify.notificationOfUpdatedMembership();
         return responseStr;
     }
 }

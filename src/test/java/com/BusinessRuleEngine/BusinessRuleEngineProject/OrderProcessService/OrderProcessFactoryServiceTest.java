@@ -41,7 +41,7 @@ public class OrderProcessFactoryServiceTest {
     @Test
     public void testOrderForExistingMembershipProduct(){
         int payment=100, orderId=4;
-        String expectedResponse = "Packing Slip generated. ";
+        String expectedResponse = "Packing Slip generated. Renewed Membership. Welcome Back, Membership Renewed.";
         String response = service.processOrder(payment,orderId);
         Assert.assertEquals(expectedResponse,response);
     }
