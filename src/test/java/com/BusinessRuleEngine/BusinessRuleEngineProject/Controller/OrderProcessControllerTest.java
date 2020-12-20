@@ -51,4 +51,20 @@ public class OrderProcessControllerTest {
         String responseString = orderController.orderProcessor(100,2);
         Assert.assertEquals(expectedResponse,responseString);
     }
+
+    @Test
+    public void testGetResultOfOrderNumberThree() throws Exception{
+        String expectedResponse = "Packing Slip generated. Activated Membership. Welcome Aboard, Membership activated.";
+        Mockito.when(orderService.processOrder(100,3)).thenReturn(expectedResponse);
+        String responseString = orderController.orderProcessor(100,3);
+        Assert.assertEquals(expectedResponse,responseString);
+    }
+
+    @Test
+    public void testGetResultOfOrderNumberFour() throws Exception{
+        String expectedResponse = "Packing Slip generated. Renewed Membership. Welcome Back, Membership Renewed.";
+        Mockito.when(orderService.processOrder(100,4)).thenReturn(expectedResponse);
+        String responseString = orderController.orderProcessor(100,4);
+        Assert.assertEquals(expectedResponse,responseString);
+    }
 }
