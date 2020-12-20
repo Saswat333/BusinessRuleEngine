@@ -3,6 +3,10 @@ package com.BusinessRuleEngine.BusinessRuleEngineProject.OrderProcessService;
 public class LearningVideoProduct implements OrderFilterInterface {
     @Override
     public String applyBusinessRule(int payment) {
-        return null;
+        String responseString;
+        SlipCreation slip = new SlipCreation();
+        responseString = slip.generatePackingSlip(payment);
+        responseString = responseString+slip.ComplimentaryVideo();
+        return responseString;
     }
 }
