@@ -45,4 +45,12 @@ public class OrderProcessFactoryServiceTest {
         String response = service.processOrder(payment,orderId);
         Assert.assertEquals(expectedResponse,response);
     }
+
+    @Test
+    public void testOrderForVideoLearningProduct(){
+        int payment=100, orderId=5;
+        String expectedResponse = "Packing Slip generated. FirstAid Video added.";
+        String response = service.processOrder(payment,orderId);
+        Assert.assertEquals(expectedResponse,response);
+    }
 }
