@@ -53,4 +53,12 @@ public class OrderProcessFactoryServiceTest {
         String response = service.processOrder(payment,orderId);
         Assert.assertEquals(expectedResponse,response);
     }
+
+    @Test
+    public void testInvalidOrderNumber(){
+        int payment=100, orderId=7;
+        String expectedResponse = "Invalid OrderNumber";
+        String response = service.processOrder(payment,orderId);
+        Assert.assertEquals(expectedResponse,response);
+    }
 }

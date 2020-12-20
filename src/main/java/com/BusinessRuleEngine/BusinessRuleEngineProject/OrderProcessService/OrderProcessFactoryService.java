@@ -29,6 +29,9 @@ public class OrderProcessFactoryService {
                 responseString = product.applyBusinessRule(payment);
             }
         }
+        else{
+            responseString = "Invalid OrderNumber";
+        }
         return responseString;
     }
 }
