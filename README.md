@@ -1,7 +1,7 @@
 # BusinessRuleEngine
 Order processing application.
 
-## About
+## Description
 It is a springboot project. 
 To run the project, we can pull the code and run in IntelliJ or Eclipse. 
 The application has a rest controller("OrderProcessController"). We can run the application in localhost and check for different endpoints given below.
